@@ -1,5 +1,5 @@
 :root {
-  --dark-blue: #102336;
+  --dark-blue: #204a74;
 }
 
 * {
@@ -14,6 +14,7 @@ body {
   background-color: var(--dark-blue);
 }
 
+/* HEADER */
 header {
   background: white;
   padding: 20px 35px;
@@ -21,11 +22,15 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 
 header h1 {
   margin: 0;
-  font-size: 36px;
+  font-size: 40px;
 }
 
 header a {
@@ -36,7 +41,6 @@ header a {
 header nav {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   width: 100%;
   flex: 1;
 }
@@ -48,9 +52,71 @@ header nav ul {
 }
 
 header nav ul li a {
-  padding: 0 60px;
-  font-size: 22px;
+  margin: 0 50px;
+  padding: 10px 25px;
+  font-size: 23px;
+  border-radius: 15px;
+  transition: color 0.15s, background-color 0.15s, box-shadow 0.15s;
 }
 
+header nav ul li a:hover {
+  color: white;
+  background-color: var(--dark-blue);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
 
+/* HERO */
+ .hero {
+  background: white;
+  padding: 200px 0;
+ }
 
+ .main-flex {
+  display: flex;
+  justify-content: center;
+  padding: 0 200px;
+ }
+
+ .hero-text {
+  align-self: center;
+  padding: 0 50px;
+ }
+
+ .hero-text h3 {
+  font-size: 5.55vw;
+  white-space: nowrap;
+ }
+
+ .hero-text h4 {
+  font-size: 1.55vw;
+  padding-bottom: 20px;
+  white-space: nowrap;
+ }
+
+ .hero-text p {
+  font-size: 18px;
+ }
+
+#headshot {
+  max-width: 35%;
+  border-radius: 50%;
+  border: 10px solid white;
+  box-shadow: 0 0 10px black;
+ }
+
+.socials-flex {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+#insta-hero, #linked-hero {
+  width: 8%;
+  margin: 0 50px;
+  transition: width .15s
+}
+
+#insta-hero:hover, #linked-hero:hover {
+  width: 9%;
+}
