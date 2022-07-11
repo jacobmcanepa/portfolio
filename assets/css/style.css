@@ -1,5 +1,6 @@
 :root {
   --dark-blue: #204a74;
+  --test-border: 10px solid #204a74;
 }
 
 * {
@@ -11,12 +12,12 @@
 body {
   font-family: Inter, sans-serif;
   color: black;
-  background-color: var(--dark-blue);
+  background-color: white;
 }
 
 /* HEADER */
 header {
-  background: white;
+  background: rgba(255, 255, 255, 0.97);
   padding: 20px 35px;
   display: flex;
   justify-content: space-between;
@@ -69,7 +70,7 @@ header nav ul li a:hover {
 /* HERO */
  .hero {
   background: white;
-  padding: 200px 0;
+  padding: 150px 0 100px 0;
  }
 
  .main-flex {
@@ -114,9 +115,59 @@ header nav ul li a:hover {
 #insta-hero, #linked-hero {
   width: 8%;
   margin: 0 50px;
-  transition: width .15s
+  transition: width .15s;
 }
 
 #insta-hero:hover, #linked-hero:hover {
   width: 9%;
+}
+
+/* WORK SECTION */
+.work {
+  background-color: var(--dark-blue);
+  padding: 30px 0;
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 30px 0;
+}
+
+.about-flex {
+  display: flex;
+  align-items: center;
+  padding: 20px 150px;
+}
+
+.about-text {
+  width: 60%;
+}
+
+.about-flex img {
+  margin-left: 100px;
+  max-width: 45%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+
+/* GENERAL RULES */
+.white-title {
+  font-size: 48px;
+  color: white;
+  border-bottom: 3px solid white;
+  padding-bottom: 10px;
+  text-align: center;
+  margin: 0 auto 35px auto;
+  width: 20%;
+}
+
+.blue-title {
+  font-size: 48px;
+  color: var(--dark-blue);
+  border-bottom: 3px solid var(--dark-blue);
+  padding-bottom: 10px;
+  text-align: center;
+  margin: 0 auto 35px auto;
+  width: 20%;
 }
