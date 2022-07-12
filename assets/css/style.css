@@ -195,8 +195,9 @@ header nav ul li a:hover {
 }
 
 .about-skills h3 {
-  font-size: 50px;
+  font-size: 45px;
   font-style: italic;
+  text-align: center;
 }
 
 .about-skills ul {
