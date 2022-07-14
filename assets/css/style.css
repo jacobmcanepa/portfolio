@@ -16,6 +16,14 @@ body {
   background-color: white;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 /* HEADER */
 header {
   background: rgba(255, 255, 255, 0.97);
@@ -111,7 +119,8 @@ header nav ul li a:hover {
  }
 
 #headshot {
-  max-width: 35%;
+  width: 35%;
+  height: 35%;
   border-radius: 50%;
   border: 10px solid white;
   box-shadow: 0 0 10px black;
@@ -146,7 +155,7 @@ header nav ul li a:hover {
 .about article {
   background-color: rgba(0, 0, 0, 0.75);
   width: 40%;
-  padding: 50px 0 150px 0;
+  padding: 50px 0 100px 0;
 }
 
 .about article h2 {
@@ -208,6 +217,7 @@ header nav ul li a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
   opacity: .5;
   transition: opacity 0.15s;
+  object-fit: cover;
 }
 
 .txtover-main {
@@ -227,6 +237,8 @@ header nav ul li a:hover {
   padding: 20px 50px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  white-space: nowrap;
 }
 
 .main-work a:hover .txtover-main img {
@@ -282,7 +294,7 @@ header nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 200px 0;
+  padding: 150px 0;
 }
 
 .contact h2 {
@@ -314,12 +326,31 @@ header nav ul li a:hover {
   -webkit-transform: rotate(-45deg);
 }
 
+.contact button, .arrow {
+  white-space: nowrap;
+}
+
 .contact button:hover {
   opacity: .85;
 }
 
 .contact button:active {
   opacity: .6;
+}
+
+.contact-socials {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 60px;
+}
+
+.contact-socials a {
+  margin: 0 18px;
+  transition: opacity 0.15s;
+}
+
+.contact-socials a:hover {
+  opacity: .75;
 }
 
 /* FOOTER */
@@ -334,4 +365,237 @@ footer {
   flex: 0 0 100%;
   text-align: center;
   padding-top: 20px;
+}
+
+/* responsive design */
+@media screen and (max-width: 1349px) {
+  .about {
+    background-position: -150px;
+  }
+
+  .txtover-main figcaption {
+    font-size: 100px;
+  }
+
+  .other-work a img {
+    width: 200px;
+  }
+
+  .txtover-other figcaption {
+    font-size: 25px;
+    padding: 15px 25px;
+  }
+}
+
+@media screen and (max-width: 1155px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+    position: relative;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav ul {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .about {
+    background-position: -200px;
+  }
+
+  .txtover-main figcaption {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 1061px) {
+  header {
+    margin-bottom: -60px;
+  }
+
+  .about {
+    background-position: -250px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .main-flex{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text {
+    padding: 20px 0 0 0;
+    text-align: center;
+  }
+
+  #headshot {
+    border: 7px solid white;
+  }
+
+  .txtover-main img {
+    width: 120%;
+  }
+
+  .txtover-main figcaption {
+    font-size: 50px;
+  }
+
+  .other-work a {
+    padding: 0 25px;
+  }
+
+  .other-work a img {
+    width: 180px;
+  }
+
+  .txtover-other figcaption {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 877px) {
+  .txtover-main figcaption {
+    font-size: 40px;
+    padding: 15px 45px;
+  }
+  .contact h2 {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header nav {
+    margin: 0 200px;
+  }
+
+  header nav ul li {
+    margin-bottom: 8px;
+  }
+
+  #headshot {
+    width: 50%; height: 50%;
+  }
+
+  .about {
+    background-position: -330px;
+  }
+
+  .txtover-main figcaption {
+    font-size: 30px;
+    padding: 10px 40px;
+  }
+
+  .txtover-main img {
+    width: 150%;
+  }
+
+  .other-work a img {
+    width: 150px;
+  }
+
+  .txtover-other figcaption {
+    font-size: 15px;
+    padding: 8px 18px;
+  }
+}
+
+@media screen and (max-width: 737px) {
+  #headshot {
+    width: 75%; height: 75%;
+  }
+
+  .txtover-main img {
+    width: 180%;
+  }
+
+  .txtover-main figcaption {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .hero {
+    padding: 100px 0 100px 0;
+  }
+  .txtover-main img {
+    width: 250%;
+  }
+
+  .txtover-main figcaption {
+    padding: 12px 20px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .txtover-main img {
+    width: 300%;
+  }
+
+  .txtover-main figcaption {
+    font-size: 20px;
+    padding: 12px 30px;
+  }
+
+  .contact h2 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .txtover-main img {
+    width: 400%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  #headshot {
+    width: 100%; height: 100%;
+  }
+
+  .txtover-main img {
+    width: 500%;
+  }
+
+  .txtover-main figcaption {
+    font-size: 40px;
+    padding: 12px 80px;
+    margin: 0 ;
+  }
+
+  .other-work {
+    padding-bottom: 0;
+  }
+
+  .other-work a img {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+
+  .txtover-other figcaption {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .txtover-main img {
+    width: 700%;
+  }
+
+  .contact h2 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .txtover-main img {
+    width: 800%;
+  }
 }
