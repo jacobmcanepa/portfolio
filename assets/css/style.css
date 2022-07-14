@@ -144,7 +144,7 @@ header nav ul li a:hover {
 
 /* ABOUT SECTION */
 .about {
-  background-image: url(/assets/images/aboutphoto.jpg);
+  background-image: url(./assets/images/aboutphoto.jpg);
   background-size: cover;
   background-position: center;
   color: white;
@@ -188,7 +188,7 @@ header nav ul li a:hover {
 
 /* WORK SECTION */
 .work {
-  background-image: url(/assets/images/black-background.webp);
+  background-image: url(./assets/images/black-background.webp);
   padding: 40px 0 110px 0;
   color: white;
   display: flex;
