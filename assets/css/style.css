@@ -119,8 +119,7 @@ header nav ul li a:hover {
  }
 
 #headshot {
-  width: 35%;
-  height: 35%;
+  width: 35%; height: 35%;
   border-radius: 50%;
   border: 10px solid white;
   box-shadow: 0 0 10px black;
@@ -150,6 +149,7 @@ header nav ul li a:hover {
   color: white;
   display: flex;
   justify-content: flex-end;
+  padding: 100px 0;
 }
 
 .about article {
@@ -217,7 +217,8 @@ header nav ul li a:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
   opacity: .5;
   transition: opacity 0.15s;
-  object-fit: cover;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .txtover-main {
@@ -248,10 +249,11 @@ header nav ul li a:hover {
 .other-work {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .other-work a {
-  padding: 0 50px;
+  padding: 20px 50px;
 }
 
 .other-work a img {
@@ -291,10 +293,10 @@ header nav ul li a:hover {
 .contact {
   background-color: var(--dark-blue);
   color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding: 150px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact h2 {
@@ -302,9 +304,7 @@ header nav ul li a:hover {
   padding-bottom: 50px;
 }
 
-.contact button {
-  flex: 1 100%;
-  margin: 0 800px;
+.contact a button {
   font-size: 25px;
   font-weight: bold;
   padding: 20px 50px;
@@ -368,26 +368,39 @@ footer {
 }
 
 /* responsive design */
-@media screen and (max-width: 1349px) {
+@media screen and (min-width: 2362px) {
   .about {
-    background-position: -150px;
+    background-size: 120%;
+    background-position: 0 32%;
+  }
+}
+@media screen and (max-width: 1420px) {
+  .txtover-main img {
+    width: 150%;
   }
 
-  .txtover-main figcaption {
-    font-size: 100px;
-  }
-
-  .other-work a img {
-    width: 200px;
-  }
-
-  .txtover-other figcaption {
-    font-size: 25px;
-    padding: 15px 25px;
+  .about {
+    background-position: -250px;
   }
 }
 
-@media screen and (max-width: 1155px) {
+@media screen and (max-width: 1169px) {
+  .txtover-main img {
+    width: 160%;
+  }
+}
+
+@media screen and (max-width: 1132px) {
+  .txtover-main img {
+    width: 170%;
+  }
+
+  #headshot {
+    width: 50%; height: 50%;
+  }
+}
+
+@media screen and (max-width: 1077px) {
   header {
     padding-bottom: 0;
     justify-content: center;
@@ -399,6 +412,10 @@ footer {
     text-align: center;
   }
 
+  header nav {
+    padding-top: 20px;
+  }
+
   header nav ul {
     width: 100%;
     justify-content: center;
@@ -406,196 +423,226 @@ footer {
     padding-bottom: 10px;
   }
 
-  .about {
-    background-position: -200px;
-  }
-
-  .txtover-main figcaption {
-    font-size: 50px;
+  header nav ul li a {
+    font-size: 32px;
   }
 }
 
-@media screen and (max-width: 1061px) {
-  header {
-    margin-bottom: -60px;
-  }
-
-  .about {
-    background-position: -250px;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  .main-flex{
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-text {
-    padding: 20px 0 0 0;
-    text-align: center;
-  }
-
-  #headshot {
-    border: 7px solid white;
-  }
-
-  .txtover-main img {
-    width: 120%;
-  }
-
-  .txtover-main figcaption {
-    font-size: 50px;
-  }
-
-  .other-work a {
-    padding: 0 25px;
-  }
-
-  .other-work a img {
-    width: 180px;
-  }
-
-  .txtover-other figcaption {
-    padding: 10px 20px;
-  }
-}
-
-@media screen and (max-width: 877px) {
-  .txtover-main figcaption {
-    font-size: 40px;
-    padding: 15px 45px;
-  }
-  .contact h2 {
-    font-size: 80px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  header nav {
-    margin: 0 200px;
-  }
-
-  header nav ul li {
-    margin-bottom: 8px;
-  }
-
-  #headshot {
-    width: 50%; height: 50%;
-  }
-
-  .about {
-    background-position: -330px;
-  }
-
-  .txtover-main figcaption {
-    font-size: 30px;
-    padding: 10px 40px;
-  }
-
-  .txtover-main img {
-    width: 150%;
-  }
-
-  .other-work a img {
-    width: 150px;
-  }
-
-  .txtover-other figcaption {
-    font-size: 15px;
-    padding: 8px 18px;
-  }
-}
-
-@media screen and (max-width: 737px) {
-  #headshot {
-    width: 75%; height: 75%;
-  }
+@media screen and (max-width: 1024px) {
 
   .txtover-main img {
     width: 180%;
   }
 
-  .txtover-main figcaption {
-    font-size: 25px;
+  .other-work a img {
+    width: 230px;
+  }
+
+  .txtover-other figcaption {
+    font-size: 28px;
+    padding: 10px 20px;
   }
 }
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 980px) {
+  .txtover-main img {
+    width: 195%;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .txtover-main img {
+    width: 210%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header nav {
+    margin: 0 -100px;
+  }
+
+  .txtover-main figcaption {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 834px) {
   .hero {
     padding: 100px 0 100px 0;
   }
-  .txtover-main img {
-    width: 250%;
-  }
-
-  .txtover-main figcaption {
-    padding: 12px 20px;
-  }
-}
-
-@media screen and (max-width: 670px) {
-  .txtover-main img {
-    width: 300%;
-  }
-
-  .txtover-main figcaption {
-    font-size: 20px;
-    padding: 12px 30px;
-  }
 
   .contact h2 {
-    font-size: 60px;
+    font-size: 80px;
   }
 }
 
-@media screen and (max-width: 630px) {
-  .txtover-main img {
-    width: 400%;
+@media screen and (max-width: 799px) {
+  header nav ul li {
+    margin-bottom: 8px;
   }
-}
 
-@media screen and (max-width: 599px) {
+  .hero {
+    padding: 20px 0 100px 0;
+  }
+
+  .hero-text h3 {
+    font-size: 90px;
+  }
+
+  .hero-text h4 {
+    font-size: 30px;
+  }
+
+  .main-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-flex img, .main-flex div {
+    margin: 20px 0;
+  }
+
   #headshot {
     width: 100%; height: 100%;
   }
 
+  #insta-hero, #linked-hero {
+    width: 20%;
+  }
+
+  .contact h2 {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 780px) {
   .txtover-main img {
-    width: 500%;
+    width: 240%;
+  }
+
+  .txtover-main figcaption {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 40px 0 100px 0;
+  }
+
+  .about {
+    background-position: -250px;
+  }
+
+  .about article {
+    width: 100%;
+  }
+
+  .txtover-main img {
+    width: 700px;
+    object-fit: cover;
+  }
+
+  .txtover-main figcaption {
+    font-size: 80px;
+  }
+
+  .other-work {
+    justify-content: center;
+  }
+  
+  .other-work a {
+    padding-bottom: 50px;
+  }
+
+  .other-work a img {
+    height: 400px;
+    width: 500px;
+  }
+
+  .contact h2 {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  header h1 {
+    font-size: 50px;
+  }
+  header nav {
+    margin: 0 -200px;
+    flex: 0 0 100%;
+  }
+
+  header nav ul li {
+    padding: 10px 0;
+  }
+
+  .hero {
+    padding-top: 10px;
+  }
+
+  #headshot {
+    width: 300px;
+  }
+
+  .hero-text h3 {
+    font-size: 60px;
+  }
+
+  .txtover-main img {
+    width: 400px;
   }
 
   .txtover-main figcaption {
     font-size: 40px;
-    padding: 12px 80px;
-    margin: 0 ;
-  }
-
-  .other-work {
-    padding-bottom: 0;
+    padding: 10px 40px;
   }
 
   .other-work a img {
-    width: 50%;
-    margin-bottom: 50px;
-  }
-
-  .txtover-other figcaption {
-    font-size: 30px;
-  }
-}
-
-@media screen and (max-width: 580px) {
-  .txtover-main img {
-    width: 700%;
+    height: 200px;
+    width: 300px;
   }
 
   .contact h2 {
-    font-size: 50px;
+    font-size: 52px;
   }
 }
 
-@media screen and (max-width: 560px) {
-  .txtover-main img {
-    width: 800%;
+@media screen and (max-width: 428px) {
+  header {
+    flex-direction: column;
+  }
+
+  .hero-text h3 {
+    font-size: 50px;
+  }
+
+  .contact h2 {
+    font-size: 45px;
   }
 }
+
+@media screen and (max-width: 390px) {
+  .hero-text h3 {
+    font-size: 45px;
+  }
+
+  .hero-text h4 {
+    font-size: 25px;
+  }
+
+  .txtover-main img {
+    width: 350px;
+  }
+
+  .other-work a img {
+    height: 150px;
+    width: 250px;
+  }
+
+  .contact h2 {
+    font-size: 40px;
+  }
+}
+
